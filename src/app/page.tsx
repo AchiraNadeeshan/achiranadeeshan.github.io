@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
 
 export default async function Home() {
@@ -30,7 +29,7 @@ export default async function Home() {
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
               href="https://create.t3.gg/en/introduction"
-              target="_blank"
+              target="_top"
             >
               <h3 className="text-2xl font-bold">Documentation →</h3>
               <div className="text-lg">
@@ -44,8 +43,6 @@ export default async function Home() {
               {hello ? hello.greeting : "Loading tRPC query..."}
             </p>
           </div>
-
-          <LatestPost />
         </div>
       </main>
     </HydrateClient>

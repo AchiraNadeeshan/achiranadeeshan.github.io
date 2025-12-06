@@ -2,7 +2,7 @@
 
 This repository will contain the new version of my personal portfolio site, built using the **T3 Stack**.
 
-> 🎯 The legacy version of my portfolio is now available at: [legacy-portfolio](https://github.com/AchiraNadeeshan/legacy-portfolio)
+> 🎯 The legacy version of my portfolio is available at: [legacy-portfolio](https://github.com/AchiraNadeeshan/legacy-portfolio)
 
 ## 🛠️ Planned Tech Stack
 
