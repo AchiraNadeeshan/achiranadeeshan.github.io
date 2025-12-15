@@ -13,7 +13,7 @@ export const blogRouter = createTRPCRouter({
     const res = await fetch(
       "https://dev.to/api/articles?username=achiranadeeshan",
     );
-    const data = await res.json();
+    const data: unknown = await res.json();
     if (!res.ok) {
       throw new Error("Failed to fetch blog posts");
     }

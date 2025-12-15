@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-import { api, HydrateClient } from "~/trpc/server";
+import {HydrateClient } from "~/trpc/server";
 
 export default async function home() {
   return (
