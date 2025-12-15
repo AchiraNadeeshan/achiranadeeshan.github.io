@@ -6,10 +6,10 @@ export default async function Home() {
     <main className="flex min-h-screen items-center justify-center bg-transparent">
       <div className="w-full max-w-3xl p-8 text-center">
         <p className="text-mocha-subtext1 mt-1 text-2xl">
-          Hello there, I'm Achira.
+          Hey there, I'm Achira.
         </p>
         <h1 className="text-mocha-lavender mt-6 text-5xl font-extrabold tracking-tight sm:text-[4.5rem]">
-          Welcome to my little space on the internet.
+          Welcome to my little corner of the internet.
         </h1>
 
         <p className="text-mocha-text mx-auto mt-10 max-w-2xl text-lg">
