@@ -1,35 +1,43 @@
 "use client";
 
 import { api } from "~/trpc/react";
+import Link from "next/link";
+import { format } from "date-fns";
 
-export default function blog() {
+export default function Blog() {
   const { data: posts, isLoading, error } = api.blog.getPosts.useQuery();
 
-  if (isLoading) return <p>Loading posts...</p>;
-  if (error) return <p>Error loading posts: {error.message}</p>;
-  if (!posts) return <p>No posts found.</p>;
-
   return (
-    <main className="mx-auto max-w-4xl p-8">
-      <h1 className="mb-6 text-4xl font-bold">My Blog</h1>
-      <p>
-        Welcome to my blog. Here I share stuff I learn throughout my development
-        journey
+    <div className="container mx-auto max-w-4xl p-8">
+      <h1 className="mb-2 text-4xl font-bold text-mocha-lavender">Blog</h1>
+      <p className="mb-8 text-mocha-subtext1">
+        Exploring ideas at the intersection of technology, AI, and security. (Following posts are generated with AI to act as placeholders while I work on writing original content.)
       </p>
-      <div className="grid gap-6 mt-6">
-        {posts.map((post) => (
-          <a
-            key={post.id}
-            href={post.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded border p-4 transition hover:shadow-lg"
+
+      {isLoading && <p className="text-mocha-text">Loading posts...</p>}
+      {error && (
+        <p className="text-mocha-red">Error loading posts: {error.message}</p>
+      )}
+
+      <div className="grid gap-8">
+        {posts?.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group block"
           >
-            <h2 className="text-2xl font-semibold">{post.title}</h2>
-            <p className="mt-1 text-sm text-gray-500">{post.published_at}</p>
-          </a>
+            <div className="rounded-lg border border-mocha-surface0 bg-mocha-mantle p-6 transition-all group-hover:border-mocha-blue group-hover:shadow-lg">
+              <h2 className="text-2xl font-semibold text-mocha-text group-hover:text-mocha-blue">
+                {post.title}
+              </h2>
+              <p className="mt-2 text-sm text-mocha-subtext1">
+                {format(new Date(post.date), "MMMM d, yyyy")}
+              </p>
+              <p className="mt-4 text-mocha-text">{post.excerpt}</p>
+            </div>
+          </Link>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

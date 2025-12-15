@@ -1,9 +1,9 @@
-import "~/styles/globals.css";
-
+import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
 
+import "~/styles/globals.css";
 import { TRPCReactProvider } from "~/trpc/react";
+import { Navbar } from "~/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Achira Nadeeshan",
@@ -11,18 +11,18 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body className="bg-mocha-crust text-mocha-text min-h-screen">
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+    <html lang="en" className={GeistSans.variable}>
+      <body className="flex min-h-screen flex-col bg-mocha-crust font-sans text-mocha-text">
+        <TRPCReactProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+        </TRPCReactProvider>
       </body>
     </html>
   );
