@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import "~/styles/globals.css";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Navbar } from "~/components/Navbar";
+import { Footer } from "~/components/Footer";
 
 export const metadata: Metadata = {
   title: "Achira Nadeeshan",
@@ -18,10 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.variable}>
-      <body className="flex min-h-screen flex-col bg-mocha-crust font-sans text-mocha-text">
+      <body className="bg-mocha-crust text-mocha-text flex min-h-screen flex-col font-sans">
         <TRPCReactProvider>
           <Navbar />
           <main className="flex-1">{children}</main>
+          <Footer />
         </TRPCReactProvider>
       </body>
     </html>

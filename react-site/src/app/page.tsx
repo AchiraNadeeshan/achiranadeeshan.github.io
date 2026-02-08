@@ -4,12 +4,14 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 export default async function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-transparent">
-      <div className="w-full max-w-3xl p-8 text-center">
-        <p className="text-mocha-subtext1 mt-1 text-2xl">
+      <div className="w-full max-w-4xl p-8 text-center">
+        <p className="text-mocha-subtext1 mt-3 text-2xl">
           Hey there, I'm Achira.
         </p>
         <h1 className="text-mocha-lavender mt-6 text-5xl font-extrabold tracking-tight sm:text-[4.5rem]">
-          Welcome to my little corner of the internet.
+          Welcome to my
+          <br />
+          little corner of the internet.
         </h1>
 
         <p className="text-mocha-text mx-auto mt-10 max-w-2xl text-lg">
