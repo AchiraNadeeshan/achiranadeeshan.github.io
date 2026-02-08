@@ -1,0 +1,9 @@
+html[data-theme="mocha"] {
+  --color-bg: #1e1e2e;
+  --color-surface: #313244;
+  --color-text: #cdd6f4;
+
+  --color-primary: #89b4fa;
+  --color-secondary: #cba6f7;
+  --color-accent: #f5c2e7;
+}

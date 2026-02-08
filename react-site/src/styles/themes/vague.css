@@ -1,0 +1,9 @@
+html[data-theme="vague"] {
+  --color-bg: #0f172a;
+  --color-surface: #020617;
+  --color-text: #e5e7eb;
+
+  --color-primary: #38bdf8;
+  --color-secondary: #818cf8;
+  --color-accent: #22d3ee;
+}

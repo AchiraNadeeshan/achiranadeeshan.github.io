@@ -33,3 +33,7 @@
   --color-mocha-flamingo: #f2cdcd;
   --color-mocha-rosewater: #f5e0dc;
 }
+
+/* Import themes */
+@import "./themes/mocha.css";
+@import "./themes/vague.css";
