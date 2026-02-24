@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+/* Import themes */
+@import "./themes/mocha.css";
+@import "./themes/vague.css";
+
 @theme {
   --font-sans:
     var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+
+
   /* Catppuccin Mocha Colors */
-  --color-mocha-crust: #11111b;
+  /* --color-mocha-crust: #11111b;
   --color-mocha-mantle: #181825;
   --color-mocha-base: #1e1e2e;
   --color-mocha-surface0: #313244;
@@ -31,9 +37,5 @@
   --color-mocha-mauve: #cba6f7;
   --color-mocha-pink: #f5c2e7;
   --color-mocha-flamingo: #f2cdcd;
-  --color-mocha-rosewater: #f5e0dc;
+  --color-mocha-rosewater: #f5e0dc; */
 }
-
-/* Import themes */
-@import "./themes/mocha.css";
-@import "./themes/vague.css";
